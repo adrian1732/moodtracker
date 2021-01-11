@@ -1,38 +1,224 @@
-.App {
-  text-align: center;
+/*:root {
+  --header-height: 3rem;
+  --nav-width: 68px;
+
+  /*colors
+  --first-color: blue;
+  --first-color-light: gray;
+  --white-color: white;
+
+  --body-font: 'Nunito', sans-serif;
+  --normal-font-size: 1rem;
+
+  --z-fixed: 100;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,::before,::after{
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  position: relative;
+  margin: var(--header-height) 0 0 0;
+  padding: 0 1 rem;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  transition: .5s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+a{
+  text-decoration: none;
+}
+
+/*header
+.header{
+  width: 100%;
+  height: var(--header-height);
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  padding:  0 1 rem;
+  background-color: var(--white-color);
+  z-index: var(--z-fixed);
+  transition: .5s;
+}
+*/
+/*
+body {
+  background-color: rgba(159, 228, 228, 0.5);
+}
+*/
+
+
+
+
+nav {
+  background-color: aquamarine;
+  margin: 0;
+  padding: 0%;
+}
+/*Creates a block around the bar */
+
+nav li {
+  display: inline-block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+}
+
+/*This is the bar for the letters decorations   */
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 19px 32px;
+}
+/*The decorations for the hovering    */
+nav a:hover {
+  background: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+/*right and left of the bar 
+#left {
+  float: left;
+  background-color: aquamarine;
+  border-radius: 25px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#right {
+  float: right;
+  
 }
+/*required message for forms */
+#errorss{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 0px;
+  color: red;
+}
+#test {
+  background-color: beige;
+  padding: 80px;
+  border: 5px solid maroon;
+
+  margin: 0;
+  border-radius: 25px;
+}
+/*Styles the login form 
+Width strecthes the form
+padding how big box is */
+input {
+  border: 5px solid rgb(224, 229, 230);
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  padding: 22px 20px;
+  margin: 0 auto;
+  text-align: right;
+  display: flex;
+  justify-content: center;
+}
+
+/*  left: 27%;
+  position: relative; */
+button {
+  border: 5px solid rgb(224, 229, 230);
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 50%;
+  padding: 12px 20px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top:  8%;
+}
+/*
+
+#page-body {
+  max-width: 700px;
+  margin: auto;
+  padding-top: 64px;
+  background-color: bisque;
+  fill-opacity: 100%;
+}
+
+.article-list-item {
+  text-decoration: none;
+  color: black;
+  padding: 16px 0 0 0;
+}
+
+
+.article-list-item p {
+  padding-bottom: 32px;
+  border-bottom: 2px solid black;
+}
+
+#add-comment-form {
+  border-bottom: 2px solid black;
+  padding: 16px;
+}
+
+#add-comment-form h3 {
+  margin-bottom: 16px;
+}
+
+#add-comment-form input, textarea {
+  display: block;
+  width: 300px;
+  padding: 8px;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  border: 2px solid black;
+  margin-bottom: 16px;
+}
+
+#add-comment-form button {
+  width: 320px;
+}
+
+#upvotes-section button, p {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.comment {
+  border-bottom: 2px solid black;
+  padding: 16px;
+}
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+/*
+.home, .reports, .products {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}*/

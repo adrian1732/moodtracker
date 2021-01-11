@@ -1,11 +1,10 @@
-import React from'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import ArticlesList from '../components/ArticlesList';
 import articleContent from './article-content';
-import ArticlesList from '../Components/ArticlesList';
 
 const ArticlesListPage = () => (
     <>
-    <h1>Articles List</h1>
+    <h1>Articles</h1>
     <ArticlesList articles={articleContent} />
     </>
 );
