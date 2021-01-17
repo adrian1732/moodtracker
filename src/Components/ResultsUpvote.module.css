@@ -1,0 +1,45 @@
+  /*Styles the login form 
+  Width strecthes the form
+  padding how big box is */
+  .input {
+    border: 5px solid rgb(5, 172, 206);
+    border-radius: 8px;
+    box-sizing: border-box;
+    width: 47%;
+    padding: 12px 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    left: 27%;
+    position: relative;
+    
+  }
+  
+  .label {
+    padding: 22px 20px;
+    text-align: center;
+    position: relative;
+    line-height: 20px;
+    margin-bottom: 100px;
+    margin-top: 100%;
+  }
+  
+  /*  left: 27%;
+    position: relative; */
+  .buttons {
+    border: 5px solid rgb(78, 104, 109);
+    border-radius: 8px;
+    display: inline;
+    position: relative;
+    max-width: 400px;
+    transform: translateX(75%);
+  }
+ 
+.sideBars {
+  text-align: left;
+}
+
+.text {
+  background-color: blue;
+}
