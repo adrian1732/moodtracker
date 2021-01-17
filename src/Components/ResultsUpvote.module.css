@@ -43,3 +43,11 @@
 .text {
   background-color: blue;
 }
+
+.goalText {
+  text-align: center;
+}
+
+.body {
+  background-color: lightblue;
+}

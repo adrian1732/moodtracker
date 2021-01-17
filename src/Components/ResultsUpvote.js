@@ -42,23 +42,23 @@ const ResultsUpvotes = ({ upvotes, setArticleInfo }) => {
     }
 
 
-        //Goes to backend of server to increase the values
-        const upvoteThinking = async () => {
-            const result = await fetch(`/api/upvoteThinking`, {
-                    method: 'post',
-            });
-            const body = await result.json();
-            setArticleInfo(body);
-        }
-        
-        //Goes to backend of server to decrease the values
-        const downvoteThinking = async () => {
-            const result = await fetch(`/api/downvoteThinking`, {
+    //Goes to backend of server to increase the values
+    const upvoteThinking = async () => {
+        const result = await fetch(`/api/upvoteThinking`, {
                 method: 'post',
-            });
-            const body = await result.json();
-            setArticleInfo(body);
-        }
+        });
+        const body = await result.json();
+        setArticleInfo(body);
+    }
+        
+    //Goes to backend of server to decrease the values
+    const downvoteThinking = async () => {
+        const result = await fetch(`/api/downvoteThinking`, {
+            method: 'post',
+        });
+        const body = await result.json();
+        setArticleInfo(body);
+    }
 
     //Message display depending on whether the goal is met or not
     const message = (votes) => {
@@ -68,21 +68,25 @@ const ResultsUpvotes = ({ upvotes, setArticleInfo }) => {
         }
         else {
             //const {width, height} = useWindowSize();
-            return <Confetti width={window.width} height={window.height} recycle={false}/> 
+            return <div>
+                    <Confetti width={window.width} height={window.height} recycle={false}/>
+                    <h3 className={styles.goalText}>You reached your daily goal!</h3>
+                   </div>
         }
     }
     
     return (
         <>
+        <div className={styles.body}>
         <div className={styles.sideBars}>
             <div id="upvotes-section">
                 <button className={styles.buttons} onClick={() => upvoteEmail()}>Add Upvote For Email</button>
                 <button className={styles.buttons} onClick={() => downvoteEmail()}>Add Downvote For Email</button>
-                <p>This post has been upvoted {upvotes} times</p>
+                <p>Goal of Emails achieved: {upvotes} times today</p>
             </div>
             <div id="upvotes-section">
                 
-                <p>This post has been downvoted {upvotes} times</p>
+                <p>Goal achieved out of total: {upvotes} times today</p>
             </div>
         </div>
         <div className={styles.sideBars}>
@@ -108,8 +112,7 @@ const ResultsUpvotes = ({ upvotes, setArticleInfo }) => {
             </div>
         </div>
         {message(upvotes)}
-        <h3>TEST</h3>
-        <h3>Second Test</h3>
+        </div>
         </>
     );
 }
